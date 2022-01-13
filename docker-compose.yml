@@ -17,7 +17,7 @@ services:
       - 6901:6901
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
-   enviroment:
+   environment:
     - vnc_pw: password # contraseña
    networks:
       red:
