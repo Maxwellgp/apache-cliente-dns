@@ -3,7 +3,7 @@ services:
  apache:
    image: apache2:latest
    ports:
-     - 800:800
+      - 800:800
    volumes:
      - conf: /usr/local/apache2/conf
      - htdocs: /usr/local/apache2/htdocs
@@ -14,7 +14,7 @@ services:
  apache-cliente:
    image: kasmweb/desktop:1.10.0
    ports:
-     - 6901:6901
+      - 6901:6901
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
    enviroment:
@@ -22,11 +22,16 @@ services:
    networks:
       red:
         ipv4_address: 10.5.0.3 
- dns:
-   image: 
-   networks:
+ bind9:
+    container_name: bind9_server
+    image: internetsystemsconsortium/bind9:9.16
+    networks:
       red:
-        ipv4_address: 10.5.0.2 
+        ipv4_address: 10.5.0.2
+    ports:
+      - 801:801
+    volumes:
+      - bind:/etc/bind
 
 networks:
   red:
@@ -35,3 +40,11 @@ networks:
      config:
        - subnet: 10.5.0.0/16
          gateway: 10.5.0.1
+
+volumes:
+  bind:
+    external: true
+  conf:
+    external: true
+  htdocs:
+    external: true
