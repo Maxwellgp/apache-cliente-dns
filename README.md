@@ -75,3 +75,5 @@ volumes:
     external: true
 ~~~
 Todos los volumenes serán creados de manera externa e independiente.
+
+Por [Samuel Gardón](https://github.com/Maxwellgp)
