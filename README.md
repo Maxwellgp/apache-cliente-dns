@@ -11,9 +11,9 @@
       red:
         ipv4_address: 10.5.0.5
 ~~~
-Su puerto será el 800:800.
-Le asignamos dos volumenes conf, htdocs.
-Le asignamos la ip 10.5.0.5 de la red.
+* Su puerto será el 800:800.
+* Le asignamos dos volumenes conf, htdocs.
+* Le asignamos la ip 10.5.0.5 de la red.
 
 ~~~
  apache-cliente:
@@ -28,9 +28,9 @@ Le asignamos la ip 10.5.0.5 de la red.
       red:
         ipv4_address: 10.5.0.3 
 ~~~
-Su puerto será el 6901:6901.
-Asignamos una contraseña que será 'password' en string.
-Le asignamos la ip 10.5.0.3 de la red.
+* Su puerto será el 6901:6901.
+* Asignamos una contraseña que será 'password' en string.
+* Le asignamos la ip 10.5.0.3 de la red.
 ~~~
  bind9:
     container_name: bind9_server
@@ -43,9 +43,9 @@ Le asignamos la ip 10.5.0.3 de la red.
     volumes:
       - bind: /etc/bind
 ~~~
-Su puerto será el 801:801.
-Le asignamos le volumen bind.
-Le asignamos la ip 10.5.0.2
+* Su puerto será el 801:801.
+* Le asignamos le volumen bind.
+* Le asignamos la ip 10.5.0.2
 ~~~
 networks:
   red:
