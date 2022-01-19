@@ -63,3 +63,15 @@ networks:
          gateway: 10.5.0.1
 ~~~
 Creamos la red en modo bridge, con subnet: 10.5.0.0 y gateway: 10.5.0.1
+
+### Volumenes
+~~~
+volumes:
+  bind:
+    external: true
+  conf:
+    external: true
+  htdocs:
+    external: true
+~~~
+Todos los volumenes serán creados de manera externa e independiente.
