@@ -46,7 +46,7 @@
     ports:
       - 801:801
     volumes:
-      - bind: /etc/bind
+      - bind:/etc/bind
 ~~~
 * Su puerto será el 801:801.
 * Le asignamos le volumen bind.
