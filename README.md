@@ -3,15 +3,15 @@
 ## Servidor Apache
 ~~~
  apache:
-   image: apache2:latest
+   image: httpd:latest
    ports:
       - 800:800
    volumes:
-     - conf: /usr/local/apache2/conf
-     - htdocs: /usr/local/apache2/htdocs
+     - conf:/usr/local/apache2/conf
+     - htdocs:/usr/local/apache2/htdocs
    networks:
       red:
-        ipv4_address: 10.5.0.5
+        ipv4_address: 10.5.0.5 
 ~~~
 * Su puerto será el 800:800.
 * Le asignamos dos volumenes conf, htdocs.

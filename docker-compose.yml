@@ -10,7 +10,6 @@ services:
    networks:
       red:
         ipv4_address: 10.5.0.5 
- 
  apache-cliente:
    image: kasmweb/desktop:1.10.0
    ports:
