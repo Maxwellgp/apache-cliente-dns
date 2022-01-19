@@ -52,7 +52,7 @@
 * Le asignamos le volumen bind.
 * Le asignamos la ip 10.5.0.2
 
-### Red
+## Red
 ~~~
 networks:
   red:
