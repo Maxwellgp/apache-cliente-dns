@@ -76,4 +76,5 @@ volumes:
 ~~~
 Todos los volumenes serán creados de manera externa e independiente.
 
-Por [Samuel Gardón](https://github.com/Maxwellgp)
+## Autor
+* **Samuel Gardón** - [Samuel Gardón](https://github.com/Maxwellgp)
