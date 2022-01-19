@@ -1,4 +1,6 @@
 # Practica Servidor WEB
+
+## Servidor Apache
 ~~~
  apache:
    image: apache2:latest
@@ -15,6 +17,7 @@
 * Le asignamos dos volumenes conf, htdocs.
 * Le asignamos la ip 10.5.0.5 de la red.
 
+## Cliente
 ~~~
  apache-cliente:
    image: kasmweb/desktop:1.10.0
@@ -31,6 +34,8 @@
 * Su puerto será el 6901:6901.
 * Asignamos una contraseña que será 'password' en string.
 * Le asignamos la ip 10.5.0.3 de la red.
+
+## DNS
 ~~~
  bind9:
     container_name: bind9_server
@@ -46,6 +51,8 @@
 * Su puerto será el 801:801.
 * Le asignamos le volumen bind.
 * Le asignamos la ip 10.5.0.2
+
+### Red
 ~~~
 networks:
   red:
