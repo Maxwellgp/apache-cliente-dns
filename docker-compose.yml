@@ -9,7 +9,7 @@ services:
      - htdocs:/usr/local/apache2/htdocs
    networks:
       red:
-        ipv4_address: 10.5.0.5 
+        ipv4_address: 10.5.0.5
  apache-cliente:
    image: kasmweb/desktop:1.10.0
    ports:
@@ -20,7 +20,7 @@ services:
     - VNC_PASSWORD=password # contraseña en string
    networks:
       red:
-        ipv4_address: 10.5.0.3 
+        ipv4_address: 10.5.0.3
  bind9:
     container_name: bind9_server
     image: internetsystemsconsortium/bind9:9.16
