@@ -5,15 +5,15 @@
  apache:
    image: httpd:latest
    ports:
-      - 800:800
+      - 8000:80
    volumes:
-     - conf:/usr/local/apache2/conf
+     - confapache:/usr/local/apache2/conf
      - htdocs:/usr/local/apache2/htdocs
    networks:
       red:
         ipv4_address: 10.5.0.5 
 ~~~
-* Su puerto será el 800:800.
+* Su puerto será el 8000:80.
 * Le asignamos dos volumenes conf, htdocs.
 * Le asignamos la ip 10.5.0.5 de la red.
 
@@ -69,7 +69,7 @@ Creamos la red en modo bridge, con subnet: 10.5.0.0 y gateway: 10.5.0.1
 volumes:
   bind:
     external: true
-  conf:
+  confapache:
     external: true
   htdocs:
     external: true
